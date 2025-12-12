@@ -1,0 +1,15 @@
+# Install ArgoCD
+
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+kubectl get namespace
+kubectl get pods -n argocd
+kubectl get svc -n argocd
+kubectl edit svc argocd-server -n argocd
+kubectl get svc -n argocd
+kubectl port-forward svc/argocd-server -n argocd 8080:80  
+
+
+# ArgoCD Password
+kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d
