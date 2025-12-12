@@ -1,6 +1,6 @@
-============= Install Jenkins If local Setup =========
+# Install Jenkins
 
-============= Install Java On Ubuntu ==========
+# Install Java On Ubuntu
 
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
 
@@ -15,7 +15,7 @@ sudo usermod -aG docker jenkins
 
 Jenkins URL ====>>  http://Your-Machine-IP:8080
 
-========================= If Using Docker Containers =======
+# If Using Docker Containers
 docker pull jenkins/jenkins
 mkdir ~/jenkins
 
@@ -24,3 +24,4 @@ usermod -aG docker jenkins
 sudo usermod -aG docker jenkins
 
 Jenkins URL ====>>  http://Your-Machine-IP:8080
+
